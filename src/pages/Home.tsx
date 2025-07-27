@@ -136,36 +136,37 @@ const Home = () => {
       <ProductCarousel />
 
       {/* Call to Action Section */}
-      <section className="relative z-10 py-16 px-4">
-        <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="glass-card p-12 rounded-3xl max-w-4xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-6">
-              Let's Connect on Instagram!
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              From personalized consultations to placing orders, everything happens through our Instagram DM.
-              Get beauty advice, product recommendations, and seamless ordering experience.
-            </p>
-            
-            <div className="flex justify-center">
-            <Button 
-              size="lg"
-              className="bg-primary text-primary-foreground glow-effect text-lg sm:text-xl px-6 sm:px-12 py-4 sm:py-6 w-full sm:w-auto smooth-transition hover:scale-105"
-              onClick={() => window.open(createInstagramProfileLink(), '_blank')}
-              >
-              <Instagram className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
-              Message Us on Instagram
-            </Button>
-</div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Call to Action Section */}
+<section className="relative z-10 py-16 px-4">
+  <div className="container mx-auto text-center">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="glass-card px-6 py-10 sm:px-12 sm:py-12 rounded-3xl max-w-3xl mx-auto"
+    >
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-playfair font-bold mb-6">
+        Let's Connect on Instagram!
+      </h2>
+      <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl mx-auto leading-relaxed">
+        From personalized consultations to placing orders, everything happens through our Instagram DM.
+        Get beauty advice, product recommendations, and a seamless ordering experience.
+      </p>
+
+      <div className="flex justify-center">
+        <Button
+          size="lg"
+          className="bg-primary text-primary-foreground glow-effect text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5 rounded-full w-full sm:w-auto smooth-transition hover:scale-105"
+          onClick={() => window.open(createInstagramProfileLink(), '_blank')}
+        >
+          <Instagram className="w-5 h-5 mr-2 sm:mr-3" />
+          Message Us on Instagram
+        </Button>
+      </div>
+    </motion.div>
+  </div>
+</section>
     </div>
   );
 };
