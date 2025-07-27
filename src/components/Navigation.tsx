@@ -20,7 +20,7 @@ const Navigation = () => {
             className="flex items-center space-x-2 smooth-transition hover:scale-105"
           >
             <img 
-              src="public/logo.png" 
+              src="/logo.png" 
               alt="Peoni Beauty Logo" 
               className="h-20 w-auto object-contain invert" 
             />
