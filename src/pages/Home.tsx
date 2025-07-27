@@ -153,14 +153,16 @@ const Home = () => {
               Get beauty advice, product recommendations, and seamless ordering experience.
             </p>
             
+            <div className="flex justify-center">
             <Button 
               size="lg"
-              className="bg-primary text-primary-foreground glow-effect text-xl px-12 py-6 smooth-transition hover:scale-105"
+              className="bg-primary text-primary-foreground glow-effect text-lg sm:text-xl px-6 sm:px-12 py-4 sm:py-6 w-full sm:w-auto smooth-transition hover:scale-105"
               onClick={() => window.open(createInstagramProfileLink(), '_blank')}
-            >
-              <Instagram className="w-6 h-6 mr-3" />
+              >
+              <Instagram className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
               Message Us on Instagram
             </Button>
+</div>
           </motion.div>
         </div>
       </section>
