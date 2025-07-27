@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Beauty Design System - Peoni Beauty */
+
+@layer base {
+  :root {
+    /* Premium Color Palette */
+    --background: 12 100% 98%;
+    --foreground: 350 62% 20%;
+
+    --card: 12 100% 99%;
+    --card-foreground: 350 62% 20%;
+
+    --popover: 12 100% 99%;
+    --popover-foreground: 350 62% 20%;
+
+    --primary: 350 62% 46%;
+    --primary-foreground: 12 100% 98%;
+    --primary-glow: 350 62% 65%;
+
+    --secondary: 4 30% 62%;
+    --secondary-foreground: 350 62% 20%;
+
+    --muted: 48 44% 92%;
+    --muted-foreground: 4 30% 45%;
+
+    --accent: 48 44% 90%;
+    --accent-foreground: 350 62% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 12 100% 98%;
+
+    --border: 48 44% 88%;
+    --input: 48 44% 90%;
+    --ring: 350 62% 46%;
+
+    --radius: 0.75rem;
+
+    /* Premium Effects */
+
+    --glass-bg: hsl(12 100% 98% / 0.9);
+    --glass-border: hsl(350 62% 46% / 0.1);
+
+    /* Premium Shadows */
+    --shadow-soft: 0 2px 20px hsl(350 62% 46% / 0.08);
+    --shadow-glow: 0 0 30px hsl(350 62% 46% / 0.15);
+    --shadow-elegant: 0 8px 30px hsl(350 62% 20% / 0.12);
+
+    /* Animation Variables */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Playfair Display', 'Inter', serif;
+  }
+}
+
+@layer components {
+  /* Premium Beauty Components */
+  .glass-card {
+    @apply backdrop-blur-sm border border-opacity-10;
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--accent)));
+  }
+
+  .instagram-button {
+    @apply bg-white text-primary border border-primary/20 hover:bg-primary hover:text-white;
+  }
+
+
+  .premium-text {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+  }
+
+  .floating-animation {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px hsl(350 100% 85% / 0.5);
+  }
+
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+
+  .bounce-transition {
+    transition: var(--transition-bounce);
+  }
+}
+
+@layer utilities {
+  /* Korean Beauty Animations */
+  @keyframes floating {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes textShimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+  }
+
+  .animate-text-shimmer {
+    animation: textShimmer 2s ease-in-out infinite;
+  }
+}
