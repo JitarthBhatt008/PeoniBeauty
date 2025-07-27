@@ -21,7 +21,7 @@ const ProductCarousel = () => {
     : products.slice(0, 4).map(product => ({
         id: product.id,
         name: product.name,
-        image: product.image || '/src/assets/product1.jpg',
+        image: product.image || '/public/assets/product1.jpg',
         brand: product.brand
       }));
 
